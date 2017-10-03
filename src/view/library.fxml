@@ -15,9 +15,16 @@
       alignment="center" spacing="10" 
       styleClass="root"
 >
-
-    <Label text="&lt;insert assignment here&gt;"/>
-
+	<ImageView>
+		<image>
+			<Image url="@UTS-logo.jpg"/>
+		</image>
+	</ImageView>
+	<Button text="Insert text"/>
+	<Button text="Insert text"/>
+	<Button text="Insert text"/>
+	<Button text="Insert text"/>
+	<Button text="Insert text"/>
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
