@@ -20,11 +20,11 @@
 			<Image url="@UTS-logo.jpg"/>
 		</image>
 	</ImageView>
-	<Button text="Insert text"/>
-	<Button text="Insert text"/>
-	<Button text="Insert text"/>
-	<Button text="Insert text"/>
-	<Button text="Insert text"/>
+	<Button text="Explore Catalogue"/>
+	<Button text="View Patron Record"/>
+	<Button text="View Favourite Books"/>
+	<Button text="Enter Administration Mode"/>
+	<Button text="Exit"/>
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
