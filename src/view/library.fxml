@@ -15,16 +15,21 @@
       alignment="center" spacing="10" 
       styleClass="root"
 >
-	<ImageView>
+	<HBox spacing="15">
+    	<ImageView>
 		<image>
 			<Image url="@UTS-logo.jpg"/>
 		</image>
-	</ImageView>
-	<Button text="Explore Catalogue"/>
+		</ImageView>
+		<Label  styleClass="heading" text="Library"/>
+		<Label  styleClass="heading" text="Management"/>
+		<Label  styleClass="heading" text="System"/>
+    </HBox>
+	<Button text="Explore Catalogue" onAction="#handleOpenCatalogue"/>
 	<Button text="View Patron Record"/>
 	<Button text="View Favourite Books"/>
 	<Button text="Enter Administration Mode"/>
-	<Button text="Exit"/>
+	<Button text="Exit" onAction="#handleExit"/>
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
