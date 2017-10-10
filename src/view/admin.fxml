@@ -8,7 +8,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.AdminController"
+ alignment="center" spacing="10" 
+      styleClass="root">
+	<HBox spacing="15">
+    	<ImageView>
+		<image>
+			<Image url="@UTS-logo.jpg"/>
+		</image>
+		</ImageView>
+		<VBox>
+			<Label  styleClass="heading" text="Library"/>
+			<Label  styleClass="heading" text="Management"/>
+			<Label  styleClass="heading" text="System"/>
+		</VBox>
+		
+    </HBox>
+    <Button text="Add Patron"/>
+    <Button text="Remove Patron"/>
+    <Button text="Add Book to Catalogue"/>
+    <Button text="Remove Boook from Catalogue"/>
+    <Button text="Close Administration Menu" onAction="#handleExit"/>
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>

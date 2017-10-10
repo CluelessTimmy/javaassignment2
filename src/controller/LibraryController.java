@@ -24,6 +24,15 @@ public class LibraryController extends Controller<Library> {
     	stage.close();
     	}
     @FXML private void handleOpenCatalogue(ActionEvent event) throws Exception {
-        ViewLoader.showStage(getLibrary().getCatalogue(), "/view/catalogue.fxml", "Complete Catalogue", new Stage());
+        ViewLoader.showStage(getLibrary().getCatalogue(), "/view/catalogue.fxml", "Catalogue", new Stage());
+    }
+    @FXML private void handleViewPatron(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/record.fxml", "Patron Record", new Stage());
+    }
+    @FXML private void handleViewFavouriteBooks(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/favourites.fxml", "Favourites", new Stage());
+    }
+    @FXML private void handleOpenAdmin(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/admin.fxml", "Administration Menu", new Stage());
     }
 }

@@ -9,29 +9,34 @@
 <?import javafx.scene.image.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-
+	  fx:controller="controller.CatalogueController"
       alignment="center" spacing="10" 
       styleClass="root">
 
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
-    <HBox >
+    <HBox spacing="15">
     	<ImageView>
 		<image>
 			<Image url="@UTS-logo.jpg"/>
 		</image>
 		</ImageView>
-		<Label  text="Library"/>
+		<VBox>
+			<Label  styleClass="heading" text="Library"/>
+			<Label  styleClass="heading" text="Management"/>
+			<Label  styleClass="heading" text="System"/>
+		</VBox>
+		
     </HBox>
+
     
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
-    <Button text="Explore Catalogue"/>
+    <Button text="Show All Books"/>
+    <Button text="Show Available Books"/>
+    <Button text="Show Books By Genre"/>
+    <Button text="Show Books By Author"/>
+    <Button text="Borrow Books"/>
+    <Button text="Return Books"/>
+    <Button text="Place Hold"/>
+    <Button text="Close Catalogue Menu" onAction="#handleExit"/>
 </VBox>

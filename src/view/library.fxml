@@ -21,14 +21,17 @@
 			<Image url="@UTS-logo.jpg"/>
 		</image>
 		</ImageView>
-		<Label  styleClass="heading" text="Library"/>
-		<Label  styleClass="heading" text="Management"/>
-		<Label  styleClass="heading" text="System"/>
+		<VBox>
+			<Label  styleClass="heading" text="Library"/>
+			<Label  styleClass="heading" text="Management"/>
+			<Label  styleClass="heading" text="System"/>
+		</VBox>
+		
     </HBox>
 	<Button text="Explore Catalogue" onAction="#handleOpenCatalogue"/>
-	<Button text="View Patron Record"/>
-	<Button text="View Favourite Books"/>
-	<Button text="Enter Administration Mode"/>
+	<Button text="View Patron Record" onAction="#handleViewPatron"/>
+	<Button text="View Favourite Books" onAction="#handleViewFavouriteBooks"/>
+	<Button text="Enter Administration Mode" onAction="#handleOpenAdmin"/>
 	<Button text="Exit" onAction="#handleExit"/>
     <stylesheets>
         <URL value="@style.css"/>
