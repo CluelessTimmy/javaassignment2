@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.TextField?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="center" fx:controller="controller.RecordController">
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="center"  styleClass="root" fx:controller="controller.RecordController">
     
     <stylesheets>
         <URL value="@style.css"/>
