@@ -27,4 +27,10 @@ public class AdminController extends Controller<Library> {
 	@FXML private void handleOpenAddBook(ActionEvent event) throws Exception {
         ViewLoader.showStage(getLibrary().getCatalogue(), "/view/addBook.fxml", "Add Book", new Stage());
     }
+	@FXML private void handleOpenRemovePatron(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/removePatron.fxml", "Remove Patron", new Stage());
+    }
+	@FXML private void handleOpenRemoveBook(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary().getCatalogue(), "/view/removeBook.fxml", "Remove Book", new Stage());
+    }
 }
