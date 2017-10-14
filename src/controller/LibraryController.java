@@ -7,6 +7,7 @@ import au.edu.uts.ap.javafx.ViewLoader;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import model.Library;
+import javafx.application.Platform;
 import javafx.event.*;
 
 public class LibraryController extends Controller<Library> {
@@ -21,7 +22,8 @@ public class LibraryController extends Controller<Library> {
     }
     
     @FXML public void handleExit(ActionEvent event) throws Exception {
-    	stage.close();
+    	Platform.exit();
+    	System.exit(0);
     	}
     @FXML private void handleOpenCatalogue(ActionEvent event) throws Exception {
         ViewLoader.showStage(getLibrary().getCatalogue(), "/view/catalogue.fxml", "Catalogue", new Stage());
