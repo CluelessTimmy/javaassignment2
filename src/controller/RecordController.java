@@ -4,13 +4,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import model.Library;
-import model.Patron;
+import model.*;
+
 import javafx.event.*;
 public class RecordController extends Controller<Library>{
 	@FXML private TextField PatronIDTf;
 	@FXML private Button showBtn;
 	@FXML private Text PatronText;
+	@FXML private ListView<Book> currentlyBorrowedLv;
+	@FXML private ListView<Book> borrowingHistoryLv;
 	
 	private int getPatronID() { return Integer.parseInt(PatronIDTf.getText());}
 	
@@ -33,6 +35,10 @@ public class RecordController extends Controller<Library>{
 	@FXML public void handleShowRecord(ActionEvent event) throws Exception{
 		if(getLibrary().getPatron(getPatronID()) == null) {
 			PatronText.setText("Invalid Patron ID");
+		}else {
+			PatronText.setText(getLibrary().getPatron(getPatronID()).toString());
+			currentlyBorrowedLv.setItems(getLibrary().getPatron(getPatronID()).currentlyBorrowed());
+			borrowingHistoryLv.setItems(getLibrary().getPatron(getPatronID()).borrowingHistory());
 		}
 	}
 }

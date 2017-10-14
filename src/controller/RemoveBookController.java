@@ -10,7 +10,7 @@ import au.edu.uts.ap.javafx.*;
 import model.*;
 
 public class RemoveBookController extends Controller<Catalogue>{
-	@FXML ListView<Book> booksLv;
+	@FXML private ListView<Book> booksLv;
 	
 	@FXML
     public void initialize() {

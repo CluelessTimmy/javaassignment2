@@ -21,12 +21,8 @@
     </HBox>
     <Text text="No Patron Selected" fx:id="PatronText"/>
     <Label text="Currently Borrowed Books:"/>
-    <ListView prefHeight="100" >
-    	
-    </ListView>
+    <ListView prefHeight="100" fx:id="currentlyBorrowedLv"/>
     <Label text="Borrowing History:"/>
-	<ListView prefHeight="100" >
-	
-	</ListView>
+	<ListView prefHeight="100" fx:id="borrowingHistoryLv"/>
 	<Button text="Close" onAction="#handleExit"/>
 </VBox>
