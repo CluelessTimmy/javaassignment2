@@ -8,9 +8,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
-
+<VBox 
+fx:controller="controller.AddBookController"
+ alignment="center" spacing="10" 
+xmlns:fx="http://javafx.com/fxml">
+	<GridPane vgap="15" hgap="15">
+    	<Label  GridPane.columnIndex="0" GridPane.rowIndex="0" text="Title:" />
+    	<TextField  GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="titleTf"/>
+    	<Label  GridPane.columnIndex="0" GridPane.rowIndex="1" text="Author:" />
+    	<TextField  GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="authorTf"/>
+    	<Label  GridPane.columnIndex="0" GridPane.rowIndex="2" text="Genre:" />
+    	<TextField  GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="genreTf"/>
+    </GridPane>
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
+    <Text fx:id="addText"/>
+    <Button text="Add Book" onAction="#handleAddBook"/>
+    <Button text="Close" onAction="#handleExit"/>
 </VBox>

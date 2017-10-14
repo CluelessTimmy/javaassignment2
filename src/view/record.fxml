@@ -7,10 +7,26 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextField?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="center" fx:controller="controller.RecordController">
     
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
+    <HBox spacing="15" alignment="center">
+    	<Label text="Patron ID:" />
+    	<TextField fx:id="PatronIDTf"/>
+    	<Button text="Show Record" disable="true" fx:id="showBtn" onAction="#handleShowRecord"/>
+    </HBox>
+    <Text text="No Patron Selected" fx:id="PatronText"/>
+    <Label text="Currently Borrowed Books:"/>
+    <ListView prefHeight="100" >
+    	
+    </ListView>
+    <Label text="Borrowing History:"/>
+	<ListView prefHeight="100" >
+	
+	</ListView>
+	<Button text="Close" onAction="#handleExit"/>
 </VBox>

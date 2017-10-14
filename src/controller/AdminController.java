@@ -1,6 +1,7 @@
 package controller;
 
 import au.edu.uts.ap.javafx.Controller;
+import au.edu.uts.ap.javafx.ViewLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
@@ -15,7 +16,15 @@ public class AdminController extends Controller<Library> {
 	public final Library getLibrary() {
         return model;
     }
+	
+	
 	@FXML public void handleExit(ActionEvent event) throws Exception {
     	stage.close();
     	}
+	@FXML private void handleOpenAddPatron(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/addPatron.fxml", "Add Patron", new Stage());
+    }
+	@FXML private void handleOpenAddBook(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary().getCatalogue(), "/view/addBook.fxml", "Add Book", new Stage());
+    }
 }

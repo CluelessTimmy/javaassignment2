@@ -8,9 +8,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
+<VBox xmlns:fx="http://javafx.com/fxml"
+ fx:controller="controller.AddPatronController"
+ alignment="center" spacing="10" 
+      styleClass="root"
+>
 
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
+   
+    <GridPane vgap="15" hgap="15">
+    	<Label  GridPane.columnIndex="0" GridPane.rowIndex="0" text="Patron ID:" />
+    	<TextField  GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="patronIDTf"/>
+    	<Label  GridPane.columnIndex="0" GridPane.rowIndex="1" text="Patron Name:" />
+    	<TextField  GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="patronNameTf"/>
+    </GridPane>
+    <Text fx:id="PatronAddText"/>
+    <Button text="Add Patron" onAction="#handleAddPatron"/>
+    <Button text="Close" onAction="#handleExit"/>
 </VBox>
