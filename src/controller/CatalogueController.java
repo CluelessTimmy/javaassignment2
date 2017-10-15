@@ -31,4 +31,13 @@ public class CatalogueController extends Controller<Catalogue> {
 	 @FXML public void handleShowByAuthor(ActionEvent event) throws Exception{
 		 ViewLoader.showStage(getCatalogue(), "/view/showBooksByAuthor.fxml", "Browse by Author", new Stage());
 	 }
+	 @FXML public void handleShowBorrow(ActionEvent event) throws Exception{
+		 ViewLoader.showStage(getCatalogue(), "/view/borrow.fxml", "Borrow a Book", new Stage());
+	 }
+	 @FXML public void handleShowReturn(ActionEvent event) throws Exception{
+		 ViewLoader.showStage(getCatalogue(), "/view/return.fxml", "Return a Book", new Stage());
+	 }
+	 @FXML public void handleShowHold(ActionEvent event) throws Exception{
+		 ViewLoader.showStage(getCatalogue(), "/view/placeHold.fxml", "Place a Hold", new Stage());
+	 }
 }

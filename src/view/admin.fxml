@@ -28,7 +28,7 @@
     <Button text="Add Patron" onAction="#handleOpenAddPatron"/>
     <Button text="Remove Patron" onAction="#handleOpenRemovePatron"/>
     <Button text="Add Book to Catalogue" onAction="#handleOpenAddBook"/>
-    <Button text="Remove Boook from Catalogue" onAction="#handleOpenRemoveBook"/>
+    <Button text="Remove Book from Catalogue" onAction="#handleOpenRemoveBook"/>
     <Button text="Close Administration Menu" onAction="#handleExit"/>
     <stylesheets>
         <URL value="@style.css"/>

@@ -35,8 +35,8 @@
     <Button text="Show Available Books" onAction="#handleShowAvailableBook"/>
     <Button text="Show Books By Genre" onAction="#handleShowByGenre"/>
     <Button text="Show Books By Author" onAction="#handleShowByAuthor"/>
-    <Button text="Borrow Books"/>
-    <Button text="Return Books"/>
-    <Button text="Place Hold"/>
+    <Button text="Borrow Books" onAction="#handleShowBorrow"/>
+    <Button text="Return Books" onAction="#handleShowReturn"/>
+    <Button text="Place Hold" onAction="#handleShowHold"/>
     <Button text="Close Catalogue Menu" onAction="#handleExit"/>
 </VBox>

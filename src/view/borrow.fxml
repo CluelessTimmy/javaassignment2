@@ -9,10 +9,20 @@
 <?import javafx.scene.layout.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-
+alignment="center" spacing="10" 
+      styleClass="root"
       fx:controller="controller.BorrowController">
 
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
+    <HBox alignment="center" spacing="15"  >
+    	<Label text="Patron ID: " />
+    	<TextField fx:id="PatronIDTf"/>
+    	<Button text="Select Patron" disable="true" fx:id="showBtn" onAction="#handleShowBooks"/>
+    </HBox>
+    <Label text="Available Books:"/>
+    <ListView prefHeight="100" fx:id="availBooksLv"/>
+    <Button text="Borrow Selected Book" disable="true" fx:id="borrowBtn" onAction="#handleBorrowBook"/>
+    <Button text="Close" onAction="#handleExit"/>
 </VBox>
