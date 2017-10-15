@@ -8,10 +8,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
-    
+<VBox xmlns:fx="http://javafx.com/fxml"
+alignment="center" spacing="10" 
+      styleClass="root"
+      fx:controller="controller.PlaceHoldController">
+
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
+    <HBox alignment="center" spacing="15"  >
+    	<Label text="Patron ID: " />
+    	<TextField fx:id="PatronIDTf"/>
+    	<Button text="Select Patron" disable="true" fx:id="showBtn" onAction="#handleShowAllBooks"/>
+    </HBox>
+    <Label text="Books:"/>
+    <ListView prefHeight="100" fx:id="allBooksLv"/>
+    <Button text="Hold Selected Book" disable="true" fx:id="holdBtn" onAction="#handleHoldBook" />
+    <Text fx:id="holdText"/>
+    <Button text="Close" onAction="#handleExit"/>
 </VBox>
-

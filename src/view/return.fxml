@@ -8,9 +8,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
-    
+<VBox xmlns:fx="http://javafx.com/fxml"
+alignment="center" spacing="10" 
+      styleClass="root"
+      fx:controller="controller.ReturnController">
+
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
+    <HBox alignment="center" spacing="15"  >
+    	<Label text="Patron ID: " />
+    	<TextField fx:id="PatronIDTf"/>
+    	<Button text="Select Patron" disable="true" fx:id="showBtn" onAction="#handleShowCurrentlyBorrowed"/>
+    </HBox>
+    <Label text="Borrowed Books:"/>
+    <ListView prefHeight="100" fx:id="borrowedBooksLv"/>
+    <Button text="Return Selected Book" disable="true" fx:id="returnBtn" onAction="#handleReturnBook"/>
+    <Button text="Close" onAction="#handleExit"/>
 </VBox>

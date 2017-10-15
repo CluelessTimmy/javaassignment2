@@ -1,6 +1,6 @@
 package controller;
 
-import javafx.beans.property.ReadOnlyObjectProperty;
+
 import javafx.collections.*;
 import javafx.event.*;
 import javafx.fxml.*;
@@ -39,7 +39,7 @@ public class BorrowController extends Controller<Catalogue>{
     	}
 	@FXML public void handleShowBooks(ActionEvent event) throws Exception{
 		if(getCatalogue().getPatron(getPatronID()) != null) {
-			availBooksLv.setItems(getCatalogue().getBooksOnShelf());
+			availBooksLv.setItems(getCatalogue().getBorrowableBooks(getCatalogue().getPatron(getPatronID())));
 		}
 	}
 	@FXML public void handleBorrowBook(ActionEvent event) throws Exception{

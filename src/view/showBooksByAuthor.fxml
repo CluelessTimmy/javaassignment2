@@ -15,7 +15,7 @@ fx:controller="controller.ShowBooksByAuthorController"
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
-    <Label text="Author:"/>
+    <Label text="Authors:"/>
     <ListView prefHeight="50" items="${controller.catalogue.authors}" fx:id="authorLv"/>
     <Button text="Display" onAction="#handleShowByAuthor"/>
     <Label text="Books by Selected Author:"/>
