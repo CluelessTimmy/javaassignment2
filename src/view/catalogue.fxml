@@ -32,7 +32,7 @@
 
     
     <Button text="Show All Books" onAction="#handleShowAllBook"/>
-    <Button text="Show Available Books"/>
+    <Button text="Show Available Books" onAction="#handleShowAvailableBook"/>
     <Button text="Show Books By Genre"/>
     <Button text="Show Books By Author"/>
     <Button text="Borrow Books"/>

@@ -31,5 +31,5 @@ fx:controller="controller.ShowAllBooksController"
 			</TableColumn>	
 		</columns>
 	</TableView>
-	<Button text="Close Catalogue Menu" onAction="#handleExit"/>
+	<Button text="Close" onAction="#handleExit"/>
 </VBox>

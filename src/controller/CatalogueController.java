@@ -22,4 +22,7 @@ public class CatalogueController extends Controller<Catalogue> {
 	 @FXML public void handleShowAllBook(ActionEvent event) throws Exception {
 		 ViewLoader.showStage(getCatalogue(), "/view/showAllBooks.fxml", "Complete Catalogue", new Stage());
 	    	}
+	 @FXML public void handleShowAvailableBook(ActionEvent event) throws Exception {
+		 ViewLoader.showStage(getCatalogue(), "/view/showAvailableBooks.fxml", "Available Books", new Stage());
+	    	}
 }
