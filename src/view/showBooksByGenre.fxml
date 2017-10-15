@@ -7,9 +7,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
+<VBox xmlns:fx="http://javafx.com/fxml"
+fx:controller="controller.ShowBooksByGenreController"
+      alignment="center" spacing="10" 
+      styleClass="root">
     
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
+    <Label text="Genres:"/>
+    <ListView prefHeight="50" items="${controller.catalogue.genres}" fx:id="genreLv"/>
+    <Button text="Display" onAction="#handleShowByGenre"/>
+    <Label text="Books in Selected Genre:"/>
+    <ListView prefHeight="100" fx:id="booksInGenreLv"/>
+    <Button text="Close" onAction="#handleExit"/>
 </VBox>

@@ -25,4 +25,10 @@ public class CatalogueController extends Controller<Catalogue> {
 	 @FXML public void handleShowAvailableBook(ActionEvent event) throws Exception {
 		 ViewLoader.showStage(getCatalogue(), "/view/showAvailableBooks.fxml", "Available Books", new Stage());
 	    	}
+	 @FXML public void handleShowByGenre(ActionEvent event) throws Exception{
+		 ViewLoader.showStage(getCatalogue(), "/view/showBooksByGenre.fxml", "Browse by Genre", new Stage());
+	 }
+	 @FXML public void handleShowByAuthor(ActionEvent event) throws Exception{
+		 ViewLoader.showStage(getCatalogue(), "/view/showBooksByAuthor.fxml", "Browse by Author", new Stage());
+	 }
 }
